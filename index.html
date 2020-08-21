@@ -5,11 +5,16 @@
     <p>Enter question?</p>
     <p>Sin of 30 degrees?</p>
     <p id='answer'></p>
+    
     <script>
       function degToRad(degrees) {
         return degrees * (Math.PI / 180);
       };
-      document.getElementById('answer').innerHTML = Math.sin(degToRad(30));
+      function round(x) {
+        return Number.parseFloat(x).toFixed(4);
+      }      
+      document.getElementById('answer').innerHTML = round(Math.sin(degToRad(30)));
     </script>
+    
   </body>
 </html>
